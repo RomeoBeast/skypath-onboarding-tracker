@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kickoff Scheduled</fullName>
+                <default>true</default>
+                <label>Kickoff Scheduled</label>
+            </value>
+            <value>
+                <fullName>Gathering Info</fullName>
+                <default>false</default>
+                <label>Gathering Info</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>QA / Review</fullName>
+                <default>false</default>
+                <label>QA / Review</label>
+            </value>
+            <value>
+                <fullName>Go Live</fullName>
+                <default>false</default>
+                <label>Go Live</label>
+            </value>
+            <value>
+                <fullName>Post-Launch Review</fullName>
+                <default>false</default>
+                <label>Post-Launch Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

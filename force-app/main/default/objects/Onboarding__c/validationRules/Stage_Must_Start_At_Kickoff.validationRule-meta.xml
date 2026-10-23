@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Must_Start_At_Kickoff</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(), NOT(ISPICKVAL(Stage__c, &quot;Kickoff Scheduled&quot;)))</errorConditionFormula>
+    <errorMessage>New onboardings start at Kickoff Scheduled.</errorMessage>
+</ValidationRule>

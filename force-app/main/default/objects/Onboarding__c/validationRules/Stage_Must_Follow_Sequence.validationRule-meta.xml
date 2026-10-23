@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Must_Follow_Sequence</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISCHANGED(Stage__c),
+  NOT(
+    OR(
+      CASE(TEXT(Stage__c),
+        &quot;Kickoff Scheduled&quot;, 1, &quot;Gathering Info&quot;, 2, &quot;Implementation&quot;, 3,
+        &quot;QA / Review&quot;, 4, &quot;Go Live&quot;, 5, &quot;Post-Launch Review&quot;, 6, 0)
+      -
+      CASE(TEXT(PRIORVALUE(Stage__c)),
+        &quot;Kickoff Scheduled&quot;, 1, &quot;Gathering Info&quot;, 2, &quot;Implementation&quot;, 3,
+        &quot;QA / Review&quot;, 4, &quot;Go Live&quot;, 5, &quot;Post-Launch Review&quot;, 6, 0)
+      = 1,
+      AND(
+        TEXT(PRIORVALUE(Stage__c)) = &quot;QA / Review&quot;,
+        ISPICKVAL(Stage__c, &quot;Implementation&quot;)
+      )
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>Onboardings move forward one stage at a time. The only step back allowed is QA / Review → Implementation.</errorMessage>
+</ValidationRule>

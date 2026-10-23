@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Cannot_Change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISNEW()), OR(ISCHANGED(Opportunity__c), ISCHANGED(Opportunity_Key__c)))</errorConditionFormula>
+    <errorMessage>An onboarding always stays with its original deal.</errorMessage>
+</ValidationRule>

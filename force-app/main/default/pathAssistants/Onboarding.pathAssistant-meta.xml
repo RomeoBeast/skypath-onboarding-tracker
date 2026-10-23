@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Onboarding__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Onboarding</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Gathering_Info_Notes__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Capture requirements, contacts and integrations. Notes are required before moving to Implementation.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Gathering Info</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Target_Launch_Date__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Confirm the customer is live and using the product.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Go Live</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Implementation_Notes__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Build and configure. Notes are required before moving to QA.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Implementation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Target_Launch_Date__c</fieldNames>
+        <fieldNames>Account__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Hold the kickoff call and confirm the target launch date with the customer.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Kickoff Scheduled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Days_In_Current_Stage__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Run the review. Reaching this stage ends the onboarding and frees CSM capacity.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Post-Launch Review</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Implementation_Notes__c</fieldNames>
+        <fieldNames>QA_Rework_Count__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;If QA fails, move back to Implementation. The rework is counted automatically.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>QA / Review</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

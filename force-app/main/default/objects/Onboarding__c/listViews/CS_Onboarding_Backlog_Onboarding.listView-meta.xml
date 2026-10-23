@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CS_Onboarding_Backlog_Onboarding</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CS Onboarding Backlog</label>
+    <queue>CS_Onboarding_Backlog</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>
